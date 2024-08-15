@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+pylint = "*"
+autopep8 = "*"
+mypy = "*"
+coverage = "*"
+
+[packages]
+pygame = "==2.0.0.dev10"
+mutmut = "*"
+
+[requires]
+python_version = "3.8"

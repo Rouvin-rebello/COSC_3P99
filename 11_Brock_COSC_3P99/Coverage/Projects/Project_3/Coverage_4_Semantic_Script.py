@@ -112,7 +112,7 @@ def measure_coverage(source_file, test_file, function_name):
     return coverage_percent
 
 if __name__ == "__main__":
-    #source_file = "Split_1_calculate_sides_core.py"
+    source_file = "Split_1_calculate_sides_core.py"
     #source_file = "Split_2_calculate_sides_boundary.py"
     #source_file = "Split_3_move_bubble_core.py"
     #source_file = "Split_4_move_bubble_boundary.py"
@@ -126,6 +126,7 @@ if __name__ == "__main__":
     #source_file = "Split_12_simulate_shoot_left_integration.py"
     test_file = "test_pybubble_shooter.py"
 
-    coverage_percent = measure_coverage(source_file, test_file, "simulate_shoot_right")
+    #change the function name in the line below!!
+    coverage_percent = measure_coverage(source_file, test_file, "calculate_sides")
     print(f"Statement Coverage: {coverage_percent:.2f}%")
     print("Statement Coverage Score:", round(coverage_percent / 10, 2))
