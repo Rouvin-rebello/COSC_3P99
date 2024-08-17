@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from pybubble_shooter import *
 
 def decide_positions(self, start, end, compare_position):

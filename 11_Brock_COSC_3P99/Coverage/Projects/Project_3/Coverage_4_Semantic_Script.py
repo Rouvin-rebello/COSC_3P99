@@ -1,3 +1,4 @@
+
 import coverage
 from unittest import mock
 import os
@@ -67,7 +68,7 @@ def measure_coverage(source_file, test_file, function_name):
         unaccounted_lines = all_lines_in_function - (covered_lines | missed_lines)
         
         # Include unaccounted lines in total statements
-        total_statements = len(function_lines | unaccounted_lines)
+        total_statements = len(function_lines | unaccounted_lines) 
         covered_statements = len(function_lines & covered_lines)
 
         # Read the source file
@@ -112,21 +113,10 @@ def measure_coverage(source_file, test_file, function_name):
     return coverage_percent
 
 if __name__ == "__main__":
-    source_file = "Split_1_calculate_sides_core.py"
-    #source_file = "Split_2_calculate_sides_boundary.py"
-    #source_file = "Split_3_move_bubble_core.py"
-    #source_file = "Split_4_move_bubble_boundary.py"
-    #source_file = "Split_5_decide_positions_core.py"
-    #source_file = "Split_6_decide_positions_output_consistency.py"
-    #source_file = "Split_7_simulate_shoot_right_core.py"
-    #source_file = "Split_8_simulate_shoot_right_boundary.py"
-    #source_file = "Split_9_simulate_shoot_right_integration.py"
-    #source_file = "Split_10_simulate_shoot_left_core.py"
-    #source_file = "Split_11_simulate_shoot_left_boundary.py"
-    #source_file = "Split_12_simulate_shoot_left_integration.py"
+    source_file = "7_change_bubbles/output_consistency.py"
     test_file = "test_pybubble_shooter.py"
 
     #change the function name in the line below!!
-    coverage_percent = measure_coverage(source_file, test_file, "calculate_sides")
+    coverage_percent = measure_coverage(source_file, test_file, "change_bubbles")
     print(f"Statement Coverage: {coverage_percent:.2f}%")
     print("Statement Coverage Score:", round(coverage_percent / 10, 2))

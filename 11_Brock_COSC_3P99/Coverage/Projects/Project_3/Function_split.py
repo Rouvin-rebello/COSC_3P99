@@ -12,14 +12,14 @@ from pybubble_shooter import *
 #         self.top = Line(left_top, right_top)
 #         self.bottom = Line(left_bottom, right_bottom)
 
-# def calculate_center(self):
-#     if self.row % 2 == 0:
-#         start = X_START_POS
-#     else:
-#         start = X_START_POS + BUBBLE_SIZE // 2
-#     x = start + BUBBLE_SIZE * self.col
-#     y = Y_START_POS + BUBBLE_SIZE * self.row
-#     self.center = Point(x, y)
+def calculate_center(self):
+    if self.row % 2 == 0:
+        start = X_START_POS
+    else:
+        start = X_START_POS + BUBBLE_SIZE // 2
+    x = start + BUBBLE_SIZE * self.col
+    y = Y_START_POS + BUBBLE_SIZE * self.row
+    self.center = Point(x, y)
 
 # def move_bubble(self, move_to):
 #         if not move_to.bubble:
@@ -59,17 +59,17 @@ from pybubble_shooter import *
 #             for line in self._simulate_bounce_course(angle, end, is_stop, True):
 #                 yield line
 
-def simulate_shoot_left(self, start, end):
-    """Yield lines on which a bullet shot to the left first will move.
-           Args:
-             start (Point): at where a bullet is shot
-             end (Point): where a bullet will collid first with the screen right wall.
-    """
-    is_stop, line = self._simulate_course(start, end)
+# def simulate_shoot_left(self, start, end):
+#     """Yield lines on which a bullet shot to the left first will move.
+#            Args:
+#              start (Point): at where a bullet is shot
+#              end (Point): where a bullet will collid first with the screen right wall.
+#     """
+#     is_stop, line = self._simulate_course(start, end)
 
-    if line:
-        yield line
-    if not is_stop:
-        angle = self.launcher_angle - 90
-        for line in self._simulate_bounce_course(angle, end, is_stop, False):
-            yield line
+#     if line:
+#         yield line
+#     if not is_stop:
+#         angle = self.launcher_angle - 90
+#         for line in self._simulate_bounce_course(angle, end, is_stop, False):
+#             yield line
