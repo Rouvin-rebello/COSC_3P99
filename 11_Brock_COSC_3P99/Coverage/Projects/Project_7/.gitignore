@@ -1,0 +1,18 @@
+# Python environment
+venv
+__pycache__
+*.pyc
+
+# Android
+bin
+.buildozer
+
+# Test data
+.coverage
+.cProfile
+
+# Build and other
+build
+dist
+*.egg-info
+other

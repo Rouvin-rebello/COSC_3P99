@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./11_Brock_COSC_3P99/Coverage/Projects/Project_6/spaceway"
+    ]
+}
