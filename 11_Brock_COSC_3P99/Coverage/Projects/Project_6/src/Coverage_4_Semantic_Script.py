@@ -129,6 +129,6 @@ if __name__ == "__main__":
     print(f"Test file: {os.path.abspath(test_file)}")
 
     # Ensure the function name matches the actual function in your code
-    coverage_percent = measure_coverage(source_file, test_file, "check_ghosts_state")
+    coverage_percent = measure_coverage(source_file, test_file, "check_ghost_state")
     print(f"Statement Coverage: {coverage_percent:.2f}%")
     print("Statement Coverage Score:", round(coverage_percent / 10, 2))

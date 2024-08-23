@@ -1,23 +1,30 @@
-import coverage
+import traceback
 import os
-import runpy
-import pytest
 import sys
+import coverage
+import pytest  # Import pytest
 
 def measure_function_coverage(test_file_path, source_file_path):
     # Start coverage measurement
     cov = coverage.Coverage()
     cov.start()
 
+    original_stdout = sys.stdout  # Save the original stdout
     try:
         # Run the test file with pytest quietly
-        original_stdout = sys.stdout
         with open(os.devnull, 'w') as devnull:
             sys.stdout = devnull
             pytest.main([test_file_path, "-q"])
     except Exception as e:
+        # Print error and traceback, ensure stdout is restored
+        sys.stdout = original_stdout
         print(f"Error running test file: {e}")
+        traceback.print_exc()
+        cov.stop()
+        cov.save()
+        return
     finally:
+        # Ensure stdout is restored and coverage is stopped
         sys.stdout = original_stdout
         cov.stop()
         cov.save()
@@ -36,11 +43,18 @@ def measure_function_coverage(test_file_path, source_file_path):
         print("Function Coverage Score:", round(coverage_percentage / 10, 2))
 
     except Exception as e:
+        # Print error and traceback
         print(f"Error analyzing coverage data: {e}")
+        traceback.print_exc()
 
 if __name__ == "__main__":
-    # Define the paths to the test file and source file
-    test_file_path = "test_pybubble_shooter.py"  # Replace with your actual test file path
-    source_file_path = "pybubble_shooter.py"  # Replace with your actual source file path
+    # Define the source file and test file
+    script_dir = os.path.dirname(os.path.abspath(__file__))
 
-    measure_function_coverage(test_file_path, source_file_path)
+    # Add the parent directory to the Python path
+    sys.path.append(os.path.join(script_dir, '..', '..'))
+
+    source_file = os.path.join(script_dir, "pacman.py")
+    test_file = os.path.join(script_dir, "test_pacman.py")
+
+    measure_function_coverage(test_file, source_file)
