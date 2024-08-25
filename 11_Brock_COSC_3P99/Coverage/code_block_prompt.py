@@ -2,7 +2,7 @@ import openai
 import os
 
 # Set your API key
-openai.api_key = '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'
+openai.api_key = "#add key"
 
 # Function to generate text using the OpenAI API interface
 def generate_text(prompt):
