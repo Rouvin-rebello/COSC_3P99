@@ -18,8 +18,8 @@ able than one with higher coverage but focusing on less critical aspects. Semant
 accurate and meaningful metric for assessing test effectiveness, bridging the gap between coverage numbers and
 real-world software reliability.
 
-**More about semantic coverage can be found below: **
+More about semantic coverage can be found below:
 
-Shared Semantic coverage report: https://www.overleaf.com/read/bbjzbnbtnhmm#28d1bd 
+**Shared Semantic coverage report**: https://www.overleaf.com/read/bbjzbnbtnhmm#28d1bd 
 
 Project Coverage Spreadsheet: [Project Ranking System.xlsx](https://1drv.ms/x/s!Agi6R56uM4x40VQu4EkrZt0RUKhc?e=LFlCf6)
