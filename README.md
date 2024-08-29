@@ -2,7 +2,7 @@ In traditional software testing, code coverage metrics such as statement, branch
 the primary means of assessing the thoroughness of tests. However, these methods often overlook the semantic
 importance of different parts of the code, leading to scenarios where a high coverage percentage does not nec-
 essarily equate to effective testing. To address this, we propose a novel approach to software coverage, termed
-Semantic Coverage, which introduces a more meaningful way to measure code coverage by assigning weigh-
+**Semantic Coverage**, which introduces a more meaningful way to measure code coverage by assigning weigh-
 tages to different segments of a function based on their significance. Each function is divided into distinct code
 splits—Core Functionality, Boundary Conditions and Edge Cases, Error Handling, Integration Points, User In-
 terface Interactions, Security Features, Performance and Scalability, Configuration and Environment, and Output
@@ -18,7 +18,7 @@ able than one with higher coverage but focusing on less critical aspects. Semant
 accurate and meaningful metric for assessing test effectiveness, bridging the gap between coverage numbers and
 real-world software reliability.
 
-More about semantic coverage can be found below: 
+**More about semantic coverage can be found below: **
 
 Shared Semantic coverage report: https://www.overleaf.com/read/bbjzbnbtnhmm#28d1bd 
 
